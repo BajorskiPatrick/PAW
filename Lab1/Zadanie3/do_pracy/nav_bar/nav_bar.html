@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Widnows-1250" />
+
+<style type="text/css">
+
+  body {
+    font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #nav_horizontal {
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: grey;
+  }
+
+  #nav_vertical {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: grey;
+  }
+
+  #nav_horizontal .nav_item {
+    flex: 1;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: grey;
+    font-weight: bold;
+    color: black;
+  }
+
+  #nav_vertical .nav_item {
+    flex: 1;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: grey;
+    font-weight: bold;
+    color: black;
+  }
+
+  .nav_icons {
+    position: relative; 
+    /* Określamy konkretny rozmiar dla ikon */
+    width: 24px;
+    height: 24px;
+    /* Zapobiega kurczeniu się, gdy tekst jest długi */
+    flex-shrink: 0; 
+  }
+
+  .nav_icons img {
+    /* To tutaj nakładamy obrazki na siebie */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Płynne przejście */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .nav_icons .go {
+    opacity: 0;
+  }
+
+  .nav_item:hover {
+    background-color: green;
+  }
+
+  .nav_item:hover .go {
+    opacity: 1;
+  }
+
+  .nav_item:hover .link {
+    opacity: 0;
+  }
+
+</style>
+</head>
+<body>
+  <div id="nav_horizontal">
+    <div class="nav_item">
+      <img src="images/home.png" />
+      <a href="/index.html">HOME</a>
+    </div>
+    <div class="nav_item">
+      <img src="images/bg_here.png" />
+      <a href="/features/">FEATURES</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/experts/">EXPERTS</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/quiz/">QUIZ</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/projects/">PROJECTS</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/horoscopes/">HOROSCOPES</a>
+    </div>
+  </div>
+
+
+  <div id="nav_vertical">
+    <div class="nav_item">
+      <img src="images/home.png" />
+      <a href="/index.html">HOME</a>
+    </div>
+    <div class="nav_item">
+      <img src="images/bg_here.png" />
+      <a href="/features/">FEATURES</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/experts/">EXPERTS</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/quiz/">QUIZ</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/projects/">PROJECTS</a>
+    </div>
+    <div class="nav_item">
+      <div class = "nav_icons">
+        <img class="link" src="images/link.png" />
+        <img class="go" src="images/go.png" />
+      </div>
+      <a href="/horoscopes/">HOROSCOPES</a>
+    </div>
+  </div>
+</body>
+</html>

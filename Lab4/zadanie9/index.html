@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="radio" id="color-btn-grey" name="color-choice">
+    <input type="radio" id="color-btn-blue" name="color-choice" checked>
+    <input type="radio" id="color-btn-orange" name="color-choice">
+
+    <div class="container">
+        <div class="content-container">
+
+            <img src="t-shirt-blue.png" alt="Blue Adidas T-shirt" class="product-image">
+
+            <div class="details">
+                <div class="description">
+                    <div class="title">
+                        <h3>Adidas Originals</h3>
+                        <h3 class="product-price">$29.99</h3>
+                    </div>
+                    <div class="subtitle">
+                        <p>Men's running tshirt</p>
+                    </div>
+                </div>
+
+                <div class="size">
+                    <input type="radio" id="size-btn-1" name="size-choice">
+                    <input type="radio" id="size-btn-2" name="size-choice">
+                    <input type="radio" id="size-btn-3" name="size-choice" checked>
+                    <input type="radio" id="size-btn-4" name="size-choice">
+                    <input type="radio" id="size-btn-5" name="size-choice">
+
+                    <h4>Size</h4>
+                    <div class="size-options">
+                        <label for="size-btn-1">XS</label>
+                        <label for="size-btn-2">S</label>
+                        <label for="size-btn-3">M</label>
+                        <label for="size-btn-4">L</label>
+                        <label for="size-btn-5">XL</label>
+                    </div>
+                </div>
+
+                <div class="color">
+                    <h4>Color</h4>
+                    <div class="color-options">
+                        <label id="color-label-grey" for="color-btn-grey"></label>
+                        <label id="color-label-blue" for="color-btn-blue"></label>
+                        <label id="color-label-orange" for="color-btn-orange"></label>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

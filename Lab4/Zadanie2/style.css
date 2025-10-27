@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #e8ecf3b1;
+}
+
+.sidebar {
+    background-color: #1e2139;
+    color: white;
+    width: 240px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease, width 0.3s ease;
+    overflow: hidden;
+}
+
+.menu-section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    color: #7e8299;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease, height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, padding 0.3s ease, justify-content 0.3s ease;
+    gap: 15px;
+}
+
+.menu-item:hover {
+    background-color: #2a2f4a;
+}
+
+.menu-item .icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item .text {
+    font-size: 15px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease, width 0.3s ease;
+    overflow: hidden;
+}
+
+.user-profile {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    color: #1e2139;
+    padding: 15px 20px;
+    margin: 0 15px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: margin 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: width 0.3s ease, height 0.3s ease, border 0.3s ease;
+    object-fit: cover;
+    border: 0px solid white;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    transition: opacity 0.3s ease, width 0.3s ease;
+    overflow: hidden;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #6c757d;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        padding: 20px 0;
+    }
+    
+    .logo-text,
+    .user-info {
+        opacity: 0;
+        width: 0;
+        overflow: hidden;
+    }
+    
+    .section-title {
+        opacity: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .menu-item .text {
+        opacity: 0;
+        width: 0;
+        overflow: hidden;
+    }
+    
+    .logo {
+        padding: 0;
+        justify-content: center;
+        gap: 0;
+    }
+    
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .menu-item {
+        padding: 12px 0;
+        justify-content: center;
+        gap: 0;
+    }
+    
+    .menu-item .icon {
+        width: 24px;
+    }
+    
+    .user-profile {
+        margin: 0 17.5px 15px;
+        padding: 15px 0;
+        justify-content: center;
+        gap: 0;
+        background-color: transparent;
+    }
+    
+    .user-avatar {
+        border: 3px solid white;
+    }
+    
+    .content {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+    }
+    
+    .content h1 {
+        font-size: 24px;
+    }
+}

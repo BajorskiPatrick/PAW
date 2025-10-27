@@ -1,0 +1,58 @@
+#content {
+    padding: 4% 4% 4% 4%;
+}
+
+#header {
+    text-align: left;
+    border-color: grey;
+    border-style: dashed;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+}
+
+h1 {
+    border-bottom-color: grey;
+    border-bottom-style: dashed;
+    border-bottom-width: 2px;
+    padding-left: 2%;
+    padding-bottom: 0.5%;
+    color: navy;
+}
+
+.intro {
+    padding-left: 2%;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+    padding-left: 2%; 
+    max-width: 70%;
+}
+
+.figure {
+    /* Dodatkowe style dla wizualnego efektu podobnego do Twojego obrazka */
+    border: 1px solid #ccc; /* Subtelna ramka */
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.figure .photo image{
+    /* Obrazek wypełnia całą szerokość swojego kontenera */
+    width: 1fr;
+    /* Upewnia się, że obrazek wygląda dobrze, jeśli ma różne proporcje */
+    display: block; 
+    height: auto;
+}
+
+.figure p {
+    /* Stylizacja podpisu */
+    text-align: left;
+    font-size: 0.9em;
+    padding: 5px 0 0 0;
+    margin: 0;
+}

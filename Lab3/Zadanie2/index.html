@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: grid;
+        }
+
+        #container {
+            grid-template-rows: 2fr 1fr 4fr 1fr;
+            width: 80vw;
+            height: 80vh;
+        }
+
+        #main-1 > div, #main-2 > div, #main-3 > div, #main-4 {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main-1 {
+            grid-row: 1;
+            background-color: grey;
+        }
+        #main-1-1 {
+            grid-column: 1;
+            background-color: lightgrey;
+            align-self: center;
+            margin-left: 4%;
+            grid-row: 1;
+        }
+        #main-1-2 {
+            grid-column: 1 / span 4;
+            grid-row: 1;
+        }
+
+        #main-2 {
+            grid-row: 2;
+        }
+
+        #main-3 {
+            grid-row: 3;
+            grid-template-columns: 2fr 4fr 1fr;
+        }
+
+        #main-4 {
+            grid-row: 4;
+            background-color: grey;
+        }
+
+        @media (max-width: 700px) {
+            #main-3 {
+                grid-template-columns: 2fr 4fr;
+            }
+            #main-3-3 {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        @media (max-width: 400px) {
+            #main-3 {
+                grid-template-columns: 1fr;
+            }
+            #main-3-3 {
+                grid-column: 1;
+            }
+            #main-1-1 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="main-1">
+            <div id="main-1-1">
+                <p>
+                    LOGO
+                </p>
+            </div>
+            <div id="main-1-2">
+                <p>
+                    TOP STRONY
+                </p>
+            </div>
+        </div>
+
+        <div id="main-2">
+            <div>
+                <p>
+                    MENU
+                </p>
+            </div>
+        </div>
+
+        <div id="main-3">
+            <div id="main-3-1">
+                <p>
+                    LEWA KOLUMNA
+                </p>
+            </div>
+            <div id="main-3-2">
+                <p>
+                    ZAWARTOŚĆ GŁÓWNA
+                </p>
+            </div>
+            <div id="main-3-3">
+                <p>
+                    PRAWA KOLUMNA
+                </p>
+            </div>
+        </div>
+
+        <div id="main-4">
+            <p>
+                STOPKA
+            </p>
+        </div>
+    </div>
+</body>
+</html>

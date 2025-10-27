@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Alignment by GR: aligning individual items on the cross axis</title>
+    <link rel="stylesheet" href="style2.css">
+    
+    <style>
+      .box {
+        display: flex;
+        flex-direction: row;
+        max-width: 80vw;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 70vh;
+        border-style: solid;
+        border-width: 2px;
+        border-color: cadetblue;
+        border-radius: 8px;
+      }
+
+      .box div {
+        flex: 1 1 0;
+        min-width: 100px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: cadetblue;
+        border-radius: 8px;
+        box-sizing: border-box;
+        background-color: lightblue;
+      }
+
+
+      #one {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding-top: 20px;
+      }
+
+      #two, #three, #four {
+        display: flex;
+        align-items: center;
+        height: 170px;
+        justify-content: center;
+      }
+
+      #three {
+        align-self: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="box">
+        <div id="one">One</div>
+        <div id="two">Two</div>
+        <div id="three">Three</div>
+        <div id="four">Four</div>
+      </div>
+    </section>
+  </body>
+</html>

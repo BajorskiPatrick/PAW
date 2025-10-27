@@ -1,0 +1,208 @@
+:root {
+    --light-bg: #f0f0f0;
+    --light-card-bg: #ffffff;
+    --light-mode-text: #1a3a52;
+    --light-border: #f0f0f0;
+    
+    --dark-bg: #0f2942;
+    --dark-card-bg: #1a3a52;
+    --dark-mode-text: #ffffff;
+    --dark-border: #0f2942;
+    
+    --light-button-bg: #1a3a52;
+    --dark-button-bg: #ffffff;
+    --toggle-off: #1a3a52;
+    --toggle-on: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease;
+}
+
+.light-container {
+    background-color: var(--light-bg);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: background-color 0.4s ease;
+}
+
+.light-switch-input {
+    display: none;
+}
+
+.profile-card {
+    background-color: var(--light-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--light-border);
+    outline: 2px solid var(--dark-border);
+    transition: border-color 0.4s ease;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--light-mode-text);
+    margin-bottom: 5px;
+    transition: color 0.4s ease;
+}
+
+.profile-role {
+    font-size: 14px;
+    color: var(--light-mode-text);
+    margin-bottom: 12px;
+    transition: color 0.4s ease;
+}
+
+.profile-description {
+    font-size: 13px;
+    color: var(--light-mode-text);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
+}
+
+.btn-read-more {
+    background-color: var(--light-button-bg);
+    color: var(--dark-mode-text);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #163050;
+}
+
+.toggle-switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-switch {
+    display: block;
+    width: 50px;
+    height: 26px;
+    background-color: var(--toggle-off);
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.light-switch-input:checked ~ .light-container {
+    background-color: var(--dark-bg);
+}
+
+.light-switch-input:checked ~ .light-container .profile-card {
+    background-color: var(--dark-card-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.light-switch-input:checked ~ .light-container .profile-image img {
+    border-color: var(--dark-border);
+    outline-color: var(--light-border);
+}
+
+.light-switch-input:checked ~ .light-container .profile-name {
+    color: var(--dark-mode-text);
+}
+
+.light-switch-input:checked ~ .light-container .profile-role,
+.light-switch-input:checked ~ .light-container .profile-description {
+    color: var(--dark-mode-text);
+}
+
+.light-switch-input:checked ~ .light-container .toggle-switch {
+    background-color: var(--toggle-on);
+}
+
+.light-switch-input:checked ~ .light-container .toggle-slider {
+    transform: translateX(24px);
+}
+
+.light-switch-input:checked ~ .light-container .btn-read-more {
+    background-color: var(--dark-button-bg);
+    color: var(--light-text);
+}
+
+@media (max-width: 576px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .toggle-switch-container {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .toggle-switch-container {
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+}

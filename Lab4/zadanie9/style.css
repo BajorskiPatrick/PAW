@@ -1,0 +1,242 @@
+:root {
+    --grey: #c9c9c9;
+    --blue: #5267dd;
+    --orange: #ff9e0c;
+    --size-option-bg: var(--blue);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body > input[type="radio"], .size > input[type="radio"] {
+    display: none;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--blue);
+}
+
+.content-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-container:hover .details {
+    transform: translateY(0);
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+    background-color: white;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.subtitle {
+    color: #d4d4d4;
+}
+
+.size {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.size-options {
+    display: flex;
+    gap: 10px;
+}
+
+.size-options label {
+    width: 28px;
+    height: 28px;
+    color: white;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    align-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#size-btn-1:checked ~ .size-options label[for="size-btn-1"],
+#size-btn-2:checked ~ .size-options label[for="size-btn-2"],
+#size-btn-3:checked ~ .size-options label[for="size-btn-3"],
+#size-btn-4:checked ~ .size-options label[for="size-btn-4"],
+#size-btn-5:checked ~ .size-options label[for="size-btn-5"] {
+    background-color: var(--size-option-bg);
+    color: white !important;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px black;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.color {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-options label {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-content: center;
+    transition: all 0.3s ease;
+}
+
+#color-label-grey {
+    background-color: var(--grey);
+}
+
+#color-label-blue {
+    background-color: var(--blue);
+}
+
+#color-label-orange {
+    background-color: var(--orange);
+}
+
+
+#color-btn-grey:checked ~ .container .content-container .details .color .color-options label[for="color-btn-grey"] {
+    border: 2px solid rgba(255, 255, 255, 0.795);
+    outline: 1px solid var(--grey);
+}
+#color-btn-grey:checked ~ .container {
+    background-color: var(--grey);
+}
+#color-btn-grey:checked ~ .container .content-container .product-image {
+    content: url('t-shirt-white.png');
+}
+#color-btn-grey:checked ~ .container .content-container .details .description .title .product-price {
+    color: var(--grey);
+}
+#color-btn-grey:checked ~ .container .content-container .details .size .size-options label {
+    --size-option-bg: var(--grey);
+}
+#color-btn-grey:checked ~ .container .content-container .details .size .size-options label {
+    --size-option-bg: var(--grey);
+    color: var(--grey)
+}
+#color-btn-grey:checked ~ .container .content-container .details .buttons .btn {
+    background-color: var(--grey);
+}
+
+
+#color-btn-blue:checked ~ .container .content-container .details .color .color-options label[for="color-btn-blue"] {
+    border: 2px solid rgba(255, 255, 255, 0.795);
+    outline: 1px solid var(--blue);
+}
+#color-btn-blue:checked ~ .container {
+    background-color: var(--blue);
+}
+#color-btn-blue:checked ~ .container .content-container .product-image {
+    content: url('t-shirt-blue.png');
+}
+#color-btn-blue:checked ~ .container .content-container .details .description .title .product-price {
+    color: var(--blue);
+}
+#color-btn-blue:checked ~ .container .content-container .details .size .size-options label {
+    --size-option-bg: var(--blue);
+    color: var(--blue)
+}
+#color-btn-blue:checked ~ .container .content-container .details .buttons .btn {
+    background-color: var(--blue);
+}
+
+
+#color-btn-orange:checked ~ .container .content-container .details .color .color-options label[for="color-btn-orange"] {
+    border: 2px solid rgba(255, 255, 255, 0.795);
+    outline: 1px solid var(--orange);
+}
+#color-btn-orange:checked ~ .container {
+    background-color: var(--orange);
+}
+#color-btn-orange:checked ~ .container .content-container .product-image {
+    content: url('t-shirt-orange.png');
+}
+#color-btn-orange:checked ~ .container .content-container .details .description .title .product-price {
+    color: var(--orange);
+}
+#color-btn-orange:checked ~ .container .content-container .details .size .size-options label {
+    --size-option-bg: var(--orange);
+}
+#color-btn-orange:checked ~ .container .content-container .details .size .size-options label {
+    --size-option-bg: var(--orange);
+    color: var(--orange)
+}
+#color-btn-orange:checked ~ .container .content-container .details .buttons .btn {
+    background-color: var(--orange);
+}

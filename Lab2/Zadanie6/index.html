@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 50vw;
+            justify-self: center;
+            gap: 2em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #mountain {
+            display: grid;
+            grid-column: 1 / 2;
+        }
+
+        #mountain-image {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        #mountain-text {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: flex-end;
+            text-align: center;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            opacity: 0;
+        }
+
+        #mountain:hover #mountain-text {
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        #desert {
+            grid-column: 2;
+            position: relative;
+        }
+
+        #search {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="mountain">
+            <img id="mountain-image" src="mountain.jpg" alt="Mountain Image">
+            <p id="mountain-text">Mount Everest is the heighest mountain on the world.</p>
+        </div>
+        <div id="desert">
+            <img src="desert.jpg" alt="Desert Image">
+            <div id="search">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

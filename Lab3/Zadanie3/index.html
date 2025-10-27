@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+
+        #my-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            justify-self: center;
+            align-items: start;
+        }
+
+        #my-header {
+            text-align: center;
+            text-transform: uppercase;
+            color: green;
+            position: sticky;
+        }
+
+        #descriptions {
+            grid-column: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-self: center;
+        }
+
+        .description {
+            grid-column: 1;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: lightblue;
+        }
+
+        #seeMoreButton {
+            margin: 20px;
+            display: inline-block;
+        }
+
+        #seeMoreButton a {
+            font-weight: 500;
+            background-color: green;
+        }
+
+        #images-container {
+            grid-column: 2;
+            margin: 20px;
+        }
+
+        #gallery {
+            justify-self: center;
+            width: 100%;
+            position: relative;
+            aspect-ratio: 1 / 1;
+        }
+
+        #gallery img {
+            width: 60%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        #image-1 {
+            position: absolute;
+            top: 5%;
+            left: 0%;
+            z-index: 1;
+        }
+        #image-2 {
+            position: absolute;
+            top: 15%;
+            right: 0%;
+            z-index: 2;
+        }
+
+        #image-3 {
+            position: absolute;
+            top: 35%;
+            left: 25%;
+            z-index: 3;
+        }
+
+        @media(max-width: 1140px) {
+            #my-container {
+                grid-template-columns: 1fr;
+            }
+
+            #images-container {
+                grid-column: 1;
+            }
+
+            #descriptions {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="my-header">
+        <h1>Ekscytujące miejsca</h1>
+    </header>
+
+    <section>
+        <div id="my-container">
+            <div id="descriptions">
+                <div class="description">
+                    <h2>Miejsce 1</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, quis tempora? Accusantium, nulla blanditiis! Adipisci, repellendus suscipit numquam, excepturi qui at nulla corrupti, eius ipsa laboriosam obcaecati aspernatur laborum odit.</p>
+                </div>
+                <div class="description">
+                    <h2>Miejsce 2</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, quis tempora? Accusantium, nulla blanditiis! Adipisci, repellendus suscipit numquam, excepturi qui at nulla corrupti, eius ipsa laboriosam obcaecati aspernatur laborum odit.</p>
+                </div>
+                <p id="seeMoreButton">
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#seeMore">
+                        Więcej ->
+                    </a>
+                </p>
+                <div id="seeMore" class="collapse">
+                    <div class="description">
+                        <h2>Miejsce 3</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, quis tempora? Accusantium, nulla blanditiis! Adipisci, repellendus suscipit numquam, excepturi qui at nulla corrupti, eius ipsa laboriosam obcaecati aspernatur laborum odit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="images-container">
+                <div id="gallery">
+                    <img id="image-1" src="images/photo1.jpg" alt="Miejsce 1">
+                    <img id="image-2" src="images/photo2.jpg" alt="Miejsce 2">
+                    <img id="image-3" src="images/photo3.jpg" alt="Miejsce 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

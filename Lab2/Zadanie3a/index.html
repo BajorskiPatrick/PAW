@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        #container {
+            flex-direction: column;
+            width: 80vw;
+            height: 80vh;
+            align-self: center;
+            justify-self: center;
+            padding: 20px;
+        }
+
+        #main-1 > div, #main-2 > div, #main-3 > div, #main-4 {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main-1 {
+            position: relative;
+            flex: 2 1 0;
+            background-color: grey;
+        }
+
+        #main-1-1 {
+            position: absolute;
+            left: 4%;
+            background-color: lightgrey;
+            align-self: center;
+            width: 25%;
+            height: 50%;
+        }
+
+        #main-1-2 {
+            flex: 1 1 0;
+        }
+
+        #main-2 {
+            flex: 1 1 0;
+            flex-direction: row;
+        }
+
+        #main-2 > div {
+            flex: 1 1 0;
+        }
+
+        #main-2 > div:nth-of-type(odd) {
+            background-color: lightgrey;
+        }
+
+        #main-3 {
+            flex: 4 1 0;
+            flex-direction: row;
+        }
+
+        #main-3-1 {
+            flex: 1 1 0;
+        }
+
+        #main-3-2 {
+            flex: 3 1 0;
+        }
+
+        #main-4 {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="main-1">
+            <div id="main-1-1">
+                <p>
+                    LOGO
+                </p>
+            </div>
+            <div id="main-1-2">
+                <p>
+                    TOP STRONY
+                </p>
+            </div>
+        </div>
+
+        <div id="main-2">
+            <div>
+                <p>
+                    STRONA GLOWNA
+                </p>
+            </div>
+            <div>
+                <p>
+                    GALERIA
+                </p>
+            </div>
+            <div>
+                <p>
+                    ZAWARTOSC   
+                </p>
+            </div>
+            <div>
+                <p>
+                    KONTAKT
+                </p>
+            </div>
+        </div>
+
+        <div id="main-3">
+            <div id="main-3-1">
+                <p>
+                    LEWA KOLUMNA
+                </p>
+            </div>
+            <div id="main-3-2">
+                <p>
+                    PRAWA KOLUMNA
+                </p>
+            </div>
+        </div>
+
+        <div id="main-4">
+            <p>
+                STOPKA
+            </p>
+        </div>
+    </div>
+</body>
+</html>
