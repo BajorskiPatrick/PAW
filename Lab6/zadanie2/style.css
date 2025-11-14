@@ -1,0 +1,71 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.target-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.target {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.target-blue {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+.target-red {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.target-yellow {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+.target-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#score-display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.controls-container {
+    display: grid;
+    gap: 10px;
+}
+
+.log-box {
+    height: 450px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 15px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.log-box p {
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 3px;
+}
